@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="w-100 h-100">
+<head>
+    <link rel="stylesheet" href="../scss/custom.css">
+    <link rel="stylesheet" href="../scss/dashboard.css">
+    <title>Dashboard | ITAcademy Inventory Management</title>
+</head>
+<body class="w-100 h-100 pt-5 px-5 pb-3 d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-center">
+        <h3>Dashboard | ITAcademy Inventory Management</h3>
+        <button id="sign-out-button" class="dashboard-action-button btn">Sign Out</button>
+    </div>
+    <div class="flex-grow-1 d-flex flex-column gap-2 py-5">
+        <h5 id="welcome-message"></h5>
+        <div>
+            <button id="add-inventory-open-button" class="d-flex gap-2 align-items-center btn dashboard-action-button dashboard-action-button-smaller">
+                <img class="dashboard-icon" src="../icons/inventory.svg" alt="Inventory">
+                Add Inventory
+            </button>
+        </div>
+        <div>
+            <span id="no-inventory-message">No inventory found.</span>
+            <table id="inventory-table" class="d-none w-100">
+                <thead class="border-bottom border-1">
+                    <tr>
+                        <th class="py-3">Title</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Warehouse</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-end border-top border-1 pt-3">
+        <div class="d-flex flex-column">
+            <div class="d-flex gap-2">
+                <span class="text-secondary">Author</span>
+                <b>Šišić Faris</b>
+            </div>
+            <div class="d-flex gap-2">
+                <span class="text-secondary">Email</span>
+                <b>sisicfarisofficial@gmail.com</b>
+            </div>
+        </div>
+        <span class="text-secondary">All Rights Reserved, &copy; Šišić Faris, 2023</span>
+    </div>
+    <div id="add-inventory-modal" class="fixed-top w-100 h-100 d-none dashboard-add-inventory-modal justify-content-center align-items-center">
+        <div class="p-5 d-flex flex-column border border-1 w-25 bg-white gap-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="text-primary">Add Inventory</h2>
+                <img id="add-inventory-close-button" src="../icons/x-mark.svg" alt="X Mark" class="dashboard-icon cursor-pointer">
+            </div>
+            <label for="add-inventory-title" class="fw-bold">Title</label>
+            <input id="add-inventory-title" type="text" class="form-control w-100" placeholder="Title">
+            <label for="add-inventory-description" class="fw-bold">Description</label>
+            <textarea id="add-inventory-description" type="text" class="form-control w-100" rows="3" placeholder="Description"></textarea>
+            <label for="add-inventory-quantity" class="fw-bold">Quantity</label>
+            <input id="add-inventory-quantity" type="number" min="1" class="form-control w-100" placeholder="Quantity">
+            <label for="add-inventory-warehouse" class="fw-bold">Warehouse</label>
+            <input id="add-inventory-warehouse" type="text" class="form-control w-100" placeholder="Warehouse">
+            <span id="add-inventory-error" class="text-danger"></span>
+            <button id="add-inventory-button" class="dashboard-action-button btn">Add Inventory</button>
+        </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase.js"></script>
+    <script defer src="../js/dashboard.js"></script>
+</body>
+</html>

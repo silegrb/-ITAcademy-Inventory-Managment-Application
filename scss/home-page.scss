@@ -1,0 +1,27 @@
+@import "custom.scss";
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.home-page-action-button {
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    font-weight: bold;
+
+    &:hover {
+        border: 1px solid $primary;
+        color: black;
+        background-color: $primary;
+    }
+}
+
+.home-page-icon {
+    width: 20px;
+}
+
+.home-page-sign-in-modal {
+    backdrop-filter: blur(5px);
+}

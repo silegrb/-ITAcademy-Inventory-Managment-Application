@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="w-100 h-100">
+<head>
+    <link rel="stylesheet" href="../scss/custom.css">
+    <link rel="stylesheet" href="../scss/home-page.css">
+    <title>Home | ITAcademy Inventory Management</title>
+</head>
+<body class="w-100 h-100 pt-5 px-5 pb-3 d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-center">
+        <h3>Home | ITAcademy Inventory Management</h3>
+        <a href="https://github.com/silegrb/itacademy-inventory-management-application" class="text-decoration-none cursor-pointer d-flex gap-2 align-items-center fw-bold text-black">
+            <img src="../icons/code.svg" alt="Code Icon" class="home-page-icon"> Source Code
+        </a>
+    </div>
+    <div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center gap-2">
+        <h2 class="text-primary">Welcome to our intuitive inventory management application!</h2>
+        <p class="text-black w-50 text-center">
+            Simplify your inventory operations and save valuable time with our powerful tool. 
+            Effortlessly track your stock all within a single, user-friendly interface! Hit sign up
+            if you don't have an account or sign in if you already created one!
+        </p>
+        <div class="d-flex justify-content-end align-items-center gap-2">
+            <button id="sign-in-open-button" class="btn home-page-action-button">Sign In</button>
+            <button id="sign-up-open-button" class="btn home-page-action-button">Sign Up</button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-end border-top border-1 pt-3">
+        <div class="d-flex flex-column">
+            <div class="d-flex gap-2">
+                <span class="text-secondary">Author</span>
+                <b>Šišić Faris</b>
+            </div>
+            <div class="d-flex gap-2">
+                <span class="text-secondary">Email</span>
+                <b>sisicfarisofficial@gmail.com</b>
+            </div>
+        </div>
+        <span class="text-secondary">All Rights Reserved, &copy; Šišić Faris, 2023</span>
+    </div>
+    <div id="sign-in-modal" class="fixed-top w-100 h-100 d-none home-page-sign-in-modal justify-content-center align-items-center">
+        <div class="p-5 d-flex flex-column border border-1 w-25 bg-white gap-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="text-primary">Sign In</h2>
+                <img id="sign-in-close-button" src="../icons/x-mark.svg" alt="X Mark" class="home-page-icon cursor-pointer">
+            </div>
+            <label for="sign-in-username" class="fw-bold">Username</label>
+            <input id="sign-in-username" type="text" class="form-control w-100" placeholder="Username">
+            <label for="sign-in-password" class="fw-bold">Password</label>
+            <input id="sign-in-password" type="password" class="form-control w-100" placeholder="Password">
+            <span id="sign-in-error" class="text-danger"></span>
+            <button id="sign-in-button" class="home-page-action-button btn">Sign In</button>
+        </div>
+    </div>
+    <div id="sign-up-modal" class="fixed-top w-100 h-100 d-none home-page-sign-in-modal justify-content-center align-items-center">
+        <div class="p-5 d-flex flex-column border border-1 w-25 bg-white gap-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="text-primary">Sign Up</h2>
+                <img id="sign-up-close-button" src="../icons/x-mark.svg" alt="X Mark" class="home-page-icon cursor-pointer">
+            </div>
+            <label for="sign-up-full-name" class="fw-bold">Full Name</label>
+            <input id="sign-up-full-name" type="text" class="form-control w-100" placeholder="Username">
+            <label for="sign-up-username" class="fw-bold">Username</label>
+            <input id="sign-up-username" type="text" class="form-control w-100" placeholder="Username">
+            <label for="sign-up-password" class="fw-bold">Password</label>
+            <input id="sign-up-password" type="password" class="form-control w-100" placeholder="Password">
+            <label for="sign-up-confirm-password" class="fw-bold">Confirm Password</label>
+            <input id="sign-up-confirm-password" type="password" class="form-control w-100" placeholder="Confirm Password">
+            <span id="sign-up-error" class="text-danger"></span>
+            <button id="sign-up-button" class="home-page-action-button btn">Sign Up</button>
+        </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase.js"></script>
+    <script defer src="../js/home-page.js"></script>
+</body>
+</html>

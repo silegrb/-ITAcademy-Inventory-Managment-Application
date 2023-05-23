@@ -1,0 +1,49 @@
+@import "custom.scss";
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dashboard-action-button {
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    font-weight: bold;
+
+    &:hover {
+        border: 1px solid $primary;
+        color: black;
+        background-color: $primary;
+    }
+}
+
+.dashboard-action-button-danger {
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    font-weight: bold;
+
+    &:hover {
+        border: 1px solid $danger;
+        color: black;
+        background-color: $danger;
+    }
+}
+
+.dashboard-action-button-smaller {
+    font-size: 16px;
+}
+
+.dashboard-icon {
+    width: 20px;
+}
+
+.dashboard-add-inventory-modal {
+    backdrop-filter: blur(5px);
+}
+
+textarea {
+    resize: none;
+}
